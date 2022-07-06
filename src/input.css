@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-img {
+    background-image: url("/Website V.3/assets/Wald.jpg");
+  }
+
+.custom-img2 {
+    background-image: url("/Website V.3/assets/Wald2.jpg");
+  }
+
+.line {
+    font-size: 2.5rem;
+    text-align: center;
+    border-right: solid 2px rgba(255,255,255,0.7);
+    white-space: nowrap;
+    overflow: hidden;
+    width: 11ch;
+    animation: typewriter 3s steps(22) 1s , cursor 500ms steps(22) infinite;
+}
+
+/* typewriter animation */
+@keyframes typewriter {
+    0%{width: 0;}
+    100%{width: 11ch;}
+}
+/* cursor animation */
+@keyframes cursor {
+    0%{border-right-color: rgba(255,255,255,0.7);}
+    100%{border-right-color: transparent;}
+}
+
+@layer utilities {
+    .animation-delay-2000 {
+      animation-delay: 2s;
+    }
+    .animation-delay-4000 {
+      animation-delay: 4s;
+    }
+  }
+
+  .loader {
+    margin: auto;
+    border: 20px solid #EAF0F6;
+    border-radius: 50%;
+    border-top: 20px solid #FF7A59;
+    width: 200px;
+    height: 200px;
+    animation: spinner 4s linear infinite;
+  }
+  
+  @keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
